@@ -1,4 +1,5 @@
 import ride
+import vehicle
 import sys
 
 # read input file
