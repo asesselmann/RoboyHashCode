@@ -1,6 +1,6 @@
 
 class Ride:
-    def __init__(params):
+    def __init__(self, params):
         self.start_row = params[0]
         self.start_col = params[1]
         self.end_row = params[2]
