@@ -1,7 +1,7 @@
 
 class Ride:
 
-    def __init__(self, number,params):
+    def __init__(self, number, params):
         self.number = number
         self.start_row = params[0]
         self.start_col = params[1]
@@ -17,3 +17,5 @@ class Ride:
         return self.finish - self.start
 
 
+def l1_norm(x, y, u, v):
+    return abs(x - u) + (y - v)
