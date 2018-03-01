@@ -1,5 +1,6 @@
 
 class Ride:
+
     def __init__(self, number,params):
         self.number = number
         self.start_row = params[0]
