@@ -1,3 +1,5 @@
+import ride
+
 # read input file
 file = open('./samples/a_example.in', 'r')
 line =  file.readline()
