@@ -1,12 +1,12 @@
 
 class Ride:
-    def __init__(self, start_row, start_col, end_row, end_col, start, finish):
-        self.start_row = start_row
-        self.start_col = start_col
-        self.end_row = end_row
-        self.end_col = end_col
-        self.start = start
-        self.finish = finish
+    def __init__(params):
+        self.start_row = params[0]
+        self.start_col = params[1]
+        self.end_row = params[2]
+        self.end_col = params[3]
+        self.start = params[4]
+        self.finish = params[5]
 
     def distance(self):
         return abs(self.end_row - self.start_row) + abs(self.end_col - self.start_col)
