@@ -6,18 +6,20 @@ import random
 input_file = open(sys.argv[1], 'r')
 line = input_file.readline()
 
-R,C,F,N,B,T = line.split()
+R,C,F,N,B,T = [int(s) for s in line.split()]
 rides = []
-for line in file:
+number = 0
+for line in input_file:
 	params = [int(r) for r in line.split()]
-	rides.append(ride.Ride(params))
+	rides.append(ride.Ride(number,params))
+	number += 1
 
 random.seed()
-assigned_routes = [[x] for x in xrange(F)]
+assigned_routes = [[x] for x in xrange(1,F+1)]
 print(assigned_routes)
 for i in range(N):
-    index = random.randint(F)
-    assigned_routes.append(i)
+    index = random.randint(0,F-1)
+    assigned_routes[index].append(i)
 
 print(assigned_routes)
 
@@ -26,7 +28,7 @@ print(assigned_routes)
 vehiclerides = ''
 for route in assigned_routes:
     for item in route:
-        vehiclerides += item + ' '
+        vehiclerides += str(item) + ' '
     vehiclerides += '\n'
 
 # write output file
